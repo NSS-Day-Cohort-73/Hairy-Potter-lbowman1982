@@ -1,4 +1,7 @@
 import { makePottery } from "./PotteryWheel.js"
+import { firePottery } from "./Kiln.js"
+
+
 // Imports go first
 
 
@@ -15,6 +18,11 @@ let bowl = makePottery("bowl", 12, 14)
 
 
 // Fire each piece of pottery in the kiln
+mug = firePottery(mug, 2300)
+platter = firePottery(platter,700)
+cup = firePottery(cup,5)
+plate = firePottery(plate,7000)
+bowl = firePottery(bowl,50)
 
 
 // Determine which ones should be sold, and their price
