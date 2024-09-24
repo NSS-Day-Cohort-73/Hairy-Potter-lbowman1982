@@ -1,19 +1,21 @@
 const potteryToSell = []
-export const toSellOrNotToSell = (potteryObject) => {
-    if (!potteryObject.weight >= 6) {
+const toSellOrNotToSell = (potteryObject) => {
+    if (potteryObject.cracked) {
+        return potteryObject
+    }
+    else if (potteryObject.weight >= 6) {
         potteryObject.price = 40;
-    } else {
-        potteryObject.price = 20;
+    } 
+    else {potteryObject.price = 20;
     }
     
     potteryToSell.push(potteryObject);
-}
 
-    return potteryObject;
+     return potteryObject;
 
 };
 
-export const usePottery = () => {
-    return [...potteryToSell];
+const usePottery = () => {
+    return potteryToSell;
 };
-
+export {toSellOrNotToSell, usePottery}
