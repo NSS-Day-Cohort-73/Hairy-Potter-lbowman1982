@@ -120,12 +120,21 @@ In the `main.js` module, invoke the `PotteryList` component function. Take its r
 > 🧨 Before you click the "Assessment Complete" button on the Learning Platform, add your answers below for each question and make a commit. It is your option to request a face-to-face meeting with a coach for a vocabulary review.
 
 1. Explain how you got the HTML, with the correct data, displayed in the browser?
-   > Your answer here
+   > In the index tab I added potteryList as an article and then referenced the main.js module as the source of that article. When referenced in the main.js module I invoked the functions of the creation of the PotteryList and the list itself as well as referenced the article asking it to refer to the document by element tag name in the innerHTML and exported the function for the un-cracked pottery to be used to retrieved the specific information to be shown on the browse. 
 2. In the **PotteryList** module, when you iterate your pottery, you need to show the evidence of what the **weight** property's value is for the 2nd piece of pottery. Use [Loom](https://www.loom.com/) to record your browser window with the developer tools open and show those values.
    > Paste your video's public URL here
 3. The **PotteryWheel** module has a single function named `makePottery`. Why doesn't that module have all of the other code in it?
-   > Your answer here
+   > The single function makePottery, according to the nature of a function itself defines many different defining attributes associated with the given pottery as well as the definition of those atributes.  The following is an explination of the inner workings of the function makePottery. 
+
+   This function called makePottery will need parameters (defining attributes), that will be shown as string (words separated with commas). 
+This string then directs that function to (=>) another function called potteryObject, which applies each defining attribute to its corresponding definition. 
+These can  and will change in the future but in this instance (for the sake of just assigning them each a definition), the defining attribute will equal its own defined name of the individual and corresponding attribute and will now be known collectively as the function potteryObject. The id is an ambiguous attribute added to the list of potteryObjects that is equal to or defined as potteryId and its definition is separately named as potteryId and is equal to 1. Therefor within the potteryObjects function the id is now equal to itself (potteryId) plus one every time it is invoked (id++) or by name. This is specifically implemented to achieve the result of itself (or whatever it is, in the future referred to as) being 
+incremented by one each time it is invoked. 
+
 4. The pottery shop has learned that there is a set of customers that are willing to buy cracked pottery at a discounted price of $2.50. That means that the cracked pottery should now be displayed in the catalog. Explain the changes that this new business strategy would cause to your algorithm.
-   > Your answer here
+   > The algorithm currently states that if not even one piece of pottery is cracked the flow of operations must continue unless the weight of the pottery is greater than 6.  If this is the case, the price will be 40 dollars.  The current algorithm further states that if there is no cracked pottery and no pieces weigh more than 6 the price will be 20 dollars.  This is represented in the for loop function containing if, else if and else functions. If the current algorithm were changed to allow for cracked pottery to be bought at a price of 2 dollars and 50 cents, the following changes would need to be made to this for loop function:
+   1.  Change the if statement to represent un-cracked pottery.  
+   This would, in the proposed algorithim, lead the operation to the conclusion that no pieces of uncracked pottery do exsist, or that in fact there are pieces of cracked pottery available to sell, it would then flow to  
+   2. an else if function stating that if there are no cracked pottery to sell I AM NOW SO LOST I WILL NEVER GET OUT OF THIS ALIVE!!!    
 5. In the **Kiln** module, you have a `firePottery()` function. You need to demonstrate how to use the debugger to verify the values of the parameters for that function when your code runs. Use [Loom](https://www.loom.com/) to record your browser window with the developer tools open and show those values.
    > Paste your video's public URL here
