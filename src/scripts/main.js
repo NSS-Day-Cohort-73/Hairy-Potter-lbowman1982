@@ -1,6 +1,7 @@
 import { makePottery } from "./PotteryWheel.js"
 import { firePottery } from "./Kiln.js"
-
+import {PotteryList} from "./PotteryList.js"
+import { toSellOrNotToSell } from "./PotteryCatalog.js"
 
 // Imports go first
 
@@ -18,15 +19,21 @@ let bowl = makePottery("bowl", 12, 14)
 
 
 // Fire each piece of pottery in the kiln
-mug = firePottery(mug, 2300)
+mug = firePottery(mug, 23)
 platter = firePottery(platter,700)
 cup = firePottery(cup,5)
-plate = firePottery(plate,7000)
+plate = firePottery(plate,50)
 bowl = firePottery(bowl,50)
 
 
 // Determine which ones should be sold, and their price
-
+const pottery = [mug, platter, cup, plate, bowl]
+for (let each of pottery) {
+    toSellOrNotToSell (each)
+    }
 
 // Invoke the component function that renders the HTML list
-
+const uncracked = PotteryList()
+const article =document.getElementsByTagName("article")[0]
+article.innerHTML = uncracked
+export {uncracked}
